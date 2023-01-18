@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Utilize um laço "for" para contar quantos dígitos tem um número inteiro e armazenar o resultado em uma variável chamada "contagem".
+
+      let numero = String(200);
+      let contagem = 1;
+
+      if (numero.length > 1) {
+        contagem = contagem + numero.length - 1;
+      }
+
+      document.write(
+        "Quantidade de dígitos do número " + numero + ": " + contagem
+      );
+    </script>
+  </body>
+</html>

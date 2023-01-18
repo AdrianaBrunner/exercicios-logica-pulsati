@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Peça para o Cliente escolher entre quatro pedidos sendo eles:
+
+      // Pizza = R$12,00 Pão de Queijo = R$ 4,00 Macarrão R$ 16,00 Pastel = R$ 4,50
+
+      // Após a escolha pergunte quanto o cliente estará dando de valor ao caixa.
+
+      // Ao final do programa calcule se o Cliente precisa de troco ou não e informe o valor do troco caso necesário.
+
+      let numeroPedido = parseInt(
+        prompt(
+          "---MENU---\n1- Pizza: R$12,00\n2- Pão de Queijo: R$ 4,00\n3- Macarrão: R$ 16,00\n4- Pastel: R$ 4,50 "
+        )
+      );
+
+      let valorCliente = parseFloat(
+        prompt("Qual o valor que está dando ao caixa?")
+      );
+
+      let troco = 0;
+
+      if (numeroPedido == 1) {
+        document.write("Você escolheu Pizza! <br>");
+        document.write("Valor dado ao caixa: " + valorCliente);
+        if (valorCliente > 12) {
+          troco = valorCliente - 12;
+        } else if (valorCliente < 12) {
+          document.write(
+            "<br>O valor dado ao caixa é insuficiente! A pizza custa R$ 12,00!"
+          );
+        }
+        document.write("<br>Seu troco é de: R$ " + troco);
+      }
+      if (numeroPedido == 1) {
+        document.write("Você escolheu Pizza! <br>");
+        document.write("Valor dado ao caixa: " + valorCliente);
+        if (valorCliente > 12) {
+          troco = valorCliente - 12;
+        } else if (valorCliente < 12) {
+          document.write(
+            "<br>O valor dado ao caixa é insuficiente! A pizza custa R$ 12,00!"
+          );
+        }
+        document.write("<br>Seu troco é de: R$ " + troco);
+      }
+      if (numeroPedido == 2) {
+        document.write("Você escolheu Pão de Queijo! <br>");
+        document.write("Valor dado ao caixa: " + valorCliente);
+        if (valorCliente > 4) {
+          troco = valorCliente - 4;
+        } else if (valorCliente < 4) {
+          document.write(
+            "<br>O valor dado ao caixa é insuficiente! O pão de queijo custa R$ 4,00!"
+          );
+        }
+        document.write("<br>Seu troco é de: R$ " + troco);
+      }
+      if (numeroPedido == 3) {
+        document.write("Você escolheu Macarrão! <br>");
+        document.write("Valor dado ao caixa: " + valorCliente);
+        if (valorCliente > 16) {
+          troco = valorCliente - 16;
+        } else if (valorCliente < 16) {
+          document.write(
+            "<br>O valor dado ao caixa é insuficiente! A macarrão custa R$ 16,00!"
+          );
+        }
+        document.write("<br>Seu troco é de: R$ " + troco);
+      }
+      if (numeroPedido == 4) {
+        document.write("Você escolheu Pastel! <br>");
+        document.write("Valor dado ao caixa: " + valorCliente);
+        if (valorCliente > 4) {
+          troco = valorCliente - 4;
+        } else if (valorCliente < 4) {
+          document.write(
+            "<br>O valor dado ao caixa é insuficiente! A pastel custa R$ 4,00!"
+          );
+        }
+        document.write("<br>Seu troco é de: R$ " + troco);
+      }
+    </script>
+  </body>
+</html>

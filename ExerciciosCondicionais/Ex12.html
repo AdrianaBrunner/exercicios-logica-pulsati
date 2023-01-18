@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Faça um programa que peça ao usuario o seu usuario o salario dele.
+      //   salários até R$ 280,00: aumento de 20%
+      //   salários entre R$ 280,00 e R$ 700 00 : aumento de 15%
+      //   salários maior que R$ 700,00 : aumento de 10%
+      //   salário antes do reajuste;
+      //   percentual de aumento aplicado;
+      //   valor do aumento;
+      //   novo salário, após o aumento.
+
+      let salario = parseFloat(prompt("Qual é o seu salário? "));
+      let salarioReajustado = 0;
+
+      let reajuste20 = (salario * 20) / 100;
+      let reajuste15 = (salario * 15) / 100;
+      let reajuste10 = (salario * 10) / 100;
+
+      if (salario < 280) {
+        salarioReajustado += salario + reajuste20;
+        document.write(
+          "Salário antes do reajuste: R$ " +
+            salario +
+            "<br> Percentual de aumento aplicado: 20%." +
+            "<br> Valor do aumento: R$ " +
+            reajuste20 +
+            "<br> Novo salário com aumento: R$ " +
+            salarioReajustado
+        );
+      } else if (salario >= 280 && salario < 700) {
+        salarioReajustado += salario + reajuste15;
+        document.write(
+            "Salário antes do reajuste: R$ " +
+            salario +
+            "<br> Percentual de aumento aplicado: 20%." +
+            "<br> Valor do aumento: R$ " +
+            reajuste20 +
+            "<br> Novo salário com aumento: R$ " +
+            salarioReajustado
+        );
+      } else if (salario > 700) {
+        salarioReajustado += salario + reajuste10;
+        document.write(
+            "Salário antes do reajuste: R$ " +
+            salario +
+            "<br> Percentual de aumento aplicado: 20%." +
+            "<br> Valor do aumento: R$ " +
+            reajuste20 +
+            "<br> Novo salário com aumento: R$ " +
+            salarioReajustado
+        );
+      }
+    </script>
+  </body>
+</html>

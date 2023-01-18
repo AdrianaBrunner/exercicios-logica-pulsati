@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Escreva um código que verifica se uma string é um palíndromo ou não e exibe a mensagem correspondente.
+
+      let frase = "Socorram me Subi no onibus em marrocos"
+      document.write(frase);
+
+      //Primeiro remover espaços
+      stringSemEspacos = frase.split(" ").join("")
+      document.write("<br>" + stringSemEspacos)
+
+      //Segundo deixar tudo em minusculo
+      stringTodaMinuscula = stringSemEspacos.toLowerCase()
+      document.write("<br>" + stringTodaMinuscula)
+
+      //Inverter a frase
+      stringInvertida = stringTodaMinuscula.split("").reverse().join("")
+      document.write("<br>" + stringInvertida)
+
+      //Comparar
+      if (stringInvertida == stringTodaMinuscula) {
+          alert("A frase é um palíndromo")
+      } else {
+          alert("A frase não é palíndromo")
+      }
+    </script>
+  </body>
+</html>

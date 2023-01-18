@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Crie um programa onde o usuário informa 2 numeros e você mostra as operações de soma, subtração, multiplicação e divisão
+
+      // OBS: Criar uma Função unica, que recebe qual a operação via parametro e assim mostrar na tela.
+      let n1 = parseFloat(prompt("Digite o primeiro numero"));
+      let n2 = parseFloat(prompt("Digite o segundo numero"));
+      let operacao = parseInt(
+        prompt(
+          "Digite a operação desejada\n1-Soma\n2-Subtração\n3-Multiplicação\n4-Divisão"
+        )
+      );
+
+      function calculadora(oper, n1, n2) {
+        let resultado;
+        switch (oper) {
+          case 1:
+            resultado = n1 + n2;
+            break;
+          case 2:
+            resultado = n1 - n2;
+            break;
+          case 3:
+            resultado = n1 * n2;
+            break;
+          case 4:
+            resultado = n1 / n2;
+            break;
+          default:
+            alert("Opção Invalida");
+        }
+        return resultado;
+      }
+
+      document.write("Resultado: " + calculadora(operacao, n1, n2));
+    </script>
+  </body>
+</html>

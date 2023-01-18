@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Crie um programa onde o usuario informa uma quantidade indeterminada de notas e você (COM UMA FUNÇÃO) mostra a média das notas
+
+      let soma = 0;
+      let notas = [];
+
+      do {
+        notaEscolhida = parseFloat(prompt("Digite uma nota ou 0 para sair"));
+        notas.push(notaEscolhida);
+        soma += notaEscolhida;
+      } while (notaEscolhida != 0);
+
+      function media(soma) {
+        let media = soma / (notas.length - 1);
+        return media.toFixed(2);
+      }
+
+      document.write(media(soma));
+    </script>
+  </body>
+</html>

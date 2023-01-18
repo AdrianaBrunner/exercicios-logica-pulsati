@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido.
+
+      let nota = parseFloat(prompt("Digite uma nota (entre 1 e 10)"));
+
+      while (nota == "" || nota < 0 || nota > 10) {
+        alert(
+          "Valor informado é inválido, não pode ser vazio e precisa estar entre 1 e 10!"
+        );
+        nota = parseFloat(prompt("Digite uma nota (entre 1 e 10)"));
+      }
+
+      document.write("Nota digitada: " + nota);
+    </script>
+  </body>
+</html>

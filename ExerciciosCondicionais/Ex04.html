@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Faça um programa onde peça para o usuario informar 3 numeros, e depois mostre qual o MAIOR numero entre eles.*/
+
+      let numero1 = parseInt(prompt("Informe o primeiro número: "));
+      let numero2 = parseInt(prompt("Informe o segundo número: "));
+      let numero3 = parseInt(prompt("Informe o terceiro número: "));
+      let maior = 0;
+
+      if (numero1 > numero2) {
+        maior = numero1;
+        document.write("O primeiro número é maior: " + maior);
+      } else if (numero2 > numero3) {
+        maior = numero2;
+        document.write("O segundo número é maior: " + maior);
+      } else {
+        maior = numero3;
+        document.write("O terceiro número é maior: " + maior);
+      }
+
+      document.write(
+        "<br>Primeiro numero: " +
+          numero1 +
+          "<br>Segundo numero: " +
+          numero2 +
+          "<br>Terceiro numero: " +
+          numero3
+      );
+    </script>
+  </body>
+</html>

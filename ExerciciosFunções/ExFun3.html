@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Peça ao usuário para digitar várias idades. Exiba quantas pessoas são maior de idade (18 anos) e quantas são menores. COM UMA FUNÇÃO QUE VERIFICA E RETORNA SE É MAIOR OU MENOR DE IDADE
+
+      let idades = [];
+
+      do {
+        idadeDigitada = parseInt(prompt("Digite uma idade ou 0 para sair"));
+        idades.push(idadeDigitada);
+      } while (idadeDigitada != 0);
+
+      function maiorIdadeOuMenorIdade() {
+        let contadorMaior = 0;
+        let contadorMenor = 0;
+
+        for (let i = 0; i <= idades.length; i++) {
+          if (idades[i] >= 18) {
+            contadorMaior++;
+          }
+          if (idades[i] < 18 && idades[i] > 0) {
+            contadorMenor++;
+          }
+        }
+        return document.write(
+          "Quantidade de maiores de idade: " +
+            contadorMaior +
+            "<br>Quantidade de menores de idade: " +
+            contadorMenor
+        );
+      }
+
+      maiorIdadeOuMenorIdade();
+    </script>
+  </body>
+</html>

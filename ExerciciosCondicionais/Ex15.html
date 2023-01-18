@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Faça um script para que o usuário informe 3 numeros e o programa mostre os pares de numeros.
+
+      // Exemplo:
+      // 3 2 3 => 2 - 3 3
+      // 5 5 7 => 7 - 5 5
+
+      let num1 = parseInt(prompt("Informe o número 1: "));
+      let num2 = parseInt(prompt("Informe o número 2: "));
+      let num3 = parseInt(prompt("Informe o número 3: "));
+
+      if (num1 == num2) {
+        document.write(
+          "Números digitados: " + num1,
+          num2,
+          num3 + "<br> Números pares: " + num1,
+          num2
+        );
+      } else if (num1 == num3) {
+        document.write(
+          "Números digitados: " + num1,
+          num2,
+          num3 + "<br> Números pares: " + num1,
+          num3
+        );
+      } else if (num2 == num3) {
+        document.write(
+          "Números digitados: " + num1,
+          num2,
+          num3 + "<br> Números pares: " + num2,
+          num3
+        );
+      }
+    </script>
+  </body>
+</html>

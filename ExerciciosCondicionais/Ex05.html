@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Faça um programa onde peça para o usuario informar 3 numeros, e depois mostre qual o MENOR numero entre eles..
+
+      let numero1 = parseInt(prompt("Informe o primeiro número: "));
+      let numero2 = parseInt(prompt("Informe o segundo número: "));
+      let numero3 = parseInt(prompt("Informe o terceiro número: "));
+      let menor = -999;
+
+      if (numero1 < numero2 && numero1 < numero3) {
+        menor = numero1;
+        document.write("O primeiro número é o menor: " + menor);
+      } else if (numero2 < numero1 && numero2 < numero3) {
+        menor = numero2;
+        document.write("O segundo número é o menor: " + menor);
+      } else {
+        menor = numero3;
+        document.write("O terceiro número é o menor: " + menor);
+      }
+
+      document.write(
+        "<br>Primeiro numero: " +
+          numero1 +
+          "<br>Segundo numero: " +
+          numero2 +
+          "<br>Terceiro numero: " +
+          numero3
+      );
+    </script>
+  </body>
+</html>

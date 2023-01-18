@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //O Departamento Estadual de Meteorologia lhe contratou para desenvolver um programa que leia as um conjunto de 5 de temperaturas, e informe ao final a menor e a maior temperaturas informadas, bem como a média das temperaturas.
+
+      document.write("Departamento Estadual de Meteorologia");
+
+      let maior = 0;
+      let menor = 9999;
+      let soma = 0;
+
+      for (let i = 1; i <= 5; i++) {
+        let temperatura = parseFloat(
+          prompt("Digite a temperatura " + i + ": ")
+        );
+        if (temperatura > maior) {
+          maior = temperatura;
+        }
+        if (temperatura < menor) {
+          menor = temperatura;
+        }
+        soma += temperatura;
+      }
+
+      let media = soma / 5;
+
+      document.write(
+        "<br>Maior temperatura: " +
+          maior +
+          "°<br>Menor temperatura: " +
+          menor +
+          "°<br> Media das temperaturas: " +
+          media +
+          "°"
+      );
+    </script>
+  </body>
+</html>
