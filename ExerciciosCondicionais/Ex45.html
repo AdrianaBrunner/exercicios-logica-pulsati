@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Escreva um programa que verifique quantos números são positivos e quantos são negativos em um array.
+
+        let lista = [25, -40, 6, 3, -8]
+        let contadorPositivo = 0
+        let contadorNegativo = 0
+
+        for(let i = 0; i <= lista.length; i++) {
+            if(lista[i] >= 0) {
+                contadorPositivo++
+            } else if (lista[i] < 0) {
+                contadorNegativo++
+            }
+        }
+
+        document.write("Numeros positivos: " + contadorPositivo + "<br>Numeros negativos: " + contadorNegativo)
+    </script>
+</body>
+</html>

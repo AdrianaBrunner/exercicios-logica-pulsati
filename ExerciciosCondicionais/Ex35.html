@@ -8,25 +8,23 @@
   </head>
   <body>
     <script>
-      //Crie um programa onde o usuario informa uma quantidade indeterminada de notas e você (COM UMA FUNÇÃO) mostra a média das notas
+      //Escreva um programa que calcule a média de uma lista de números com quantidade definida pelo usuário
 
+      let numeros = [];
       let soma = 0;
-      let notas = [];
+      let numeroEscolhido;
       let opcao = true;
 
       do {
-        notaEscolhida = parseFloat(prompt("Digite uma nota"));
-        notas.push(notaEscolhida);
-        soma += notaEscolhida;
+        numeroEscolhido = parseInt(prompt("Digite um numero inteiro"));
+        numeros.push(numeroEscolhido);
+        soma += numeroEscolhido;
         opcao = confirm("Você quer continuar?");
       } while (opcao == true);
 
-      function media(soma) {
-        let media = soma / (notas.length);
-        return media.toFixed(2);
-      }
+      let media = soma / numeros.length;
 
-      document.write(media(soma));
+      document.write("Media: " + media);
     </script>
   </body>
 </html>

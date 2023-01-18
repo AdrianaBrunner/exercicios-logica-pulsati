@@ -167,29 +167,71 @@ let numero1 = parseFloat(prompt('Digite o numero'));
 `Escreva um código que verifica se uma string é um palíndromo ou não e exibe a mensagem correspondente.`
 
 ## 28
-
 Utilize um laço "for" para imprimir todas as letras de uma string chamada "palavra" no console. 
 
 ## 29
-
 Utilize um laço "for" para encontrar a soma dos primeiros n números inteiros positivos e armazenar o resultado em uma variável chamada "soma". 
 
 ## 30
-
 Utilize um laço "for" para criar uma pirâmide de números, onde cada linha tem um número a mais do que a linha anterior. 
 
 ## 31
-
 Utilize um laço "for" para gerar uma tabela de tabuada de um número específico. 
 
 ## 32
-
 Utilize um laço "for" para contar quantos dígitos tem um número inteiro e armazenar o resultado em uma variável chamada "contagem". 
 
 ## 33
-
 Utilize um laço "for" para gerar uma contagem regressiva de 10 até 0 e imprimir cada número no console. 
 
 ## 34
-
 Utilize um laço "for" para percorrer uma string e trocar todas as letras "a" por "x" e imprimir a string modificada.
+
+## 35
+Escreva um programa que calcule a média de uma lista de números com quantidade definida pelo usuário
+
+## 36
+Escreva um programa que ordene uma lista de números em ordem crescente.
+
+## 37
+Escreva um programa que verifique se todos os números são ou pares ou impares de um array.
+
+## 38
+Escreva um programa que calcule o fatorial de um número escolhido pelo usuário.
+
+## 39
+
+Escreva um programa que encontre o maior número em uma lista.
+
+## 40
+Escreva um programa que verifique se um número é capicua
+
+## 41
+Escreva um programa que verifique se um número é divisível por outro
+
+## 42
+Escreva um programa que encontre o menor número em uma lista
+
+## 43
+Escreva um programa que calcule a soma dos números impares de uma lista
+
+## 44
+Escreva um programa que some o resto da divisão de dois números inteiros
+
+## 45
+Escreva um programa que verifique quantos números são positivos e quantos são negativos em um array.
+
+## 46
+Escreva um programa que calcule o logaritmo de um número.
+
+## 47
+Escreva um programa que calcule a raiz quadrada de um número
+
+## 48
+Escreva um programa que calcule a formula de baskara de números definidos pelo usuário
+
+## 49
+Escreva um programa que calcule a potência de um número. 
+
+## DESAFIO 50
+Escreva um programa que gere um numero aleatório e some até que essa soma dos números passe de 200
