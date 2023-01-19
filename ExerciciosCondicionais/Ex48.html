@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //Escreva um programa que calcule a formula de baskara de números definidos pelo usuário
+      //Escreva um programa que calcule a formula de baskara de números definidos pelo usuário
+
+      let a = parseInt(prompt("Digite o valor de a:"));
+      let b = parseInt(prompt("Digite o valor de b:"));
+      let c = parseInt(prompt("Digite o valor de c:"));
+
+      let delta = Math.pow(b, 2) - 4 * a * c;
+
+      if (delta >= 0) {
+        let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+        document.write(`X1 = ${x1} X2 = ${x2}`);
+      } else {
+        document.write("A equação não possui valores reais");
+      }
     </script>
-</body>
+  </body>
 </html>

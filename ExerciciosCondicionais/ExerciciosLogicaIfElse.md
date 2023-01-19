@@ -235,3 +235,54 @@ Escreva um programa que calcule a potência de um número. 
 
 ## DESAFIO 50
 Escreva um programa que gere um numero aleatório e some até que essa soma dos números passe de 200
+
+## 51
+Escreva um programa que calcule a soma dos n numeros porém somente dos numeros que nao forem inteiros 
+
+## 52
+Escreva um programa que verifique se um número é divisível por outro 
+
+## 53
+Escreva um programa onde você pessa N numeros e depois mostre qual o menor numero que estiver entre a posição 5 e 10 
+
+## 54
+Escreva um programa que calcule o resto da divisão de dois números não inteiros 
+
+## 55
+Escreva um programa que verifique se um número é triangular. 
+
+## 56
+Escreva um programa que encontre o número mais frequente em uma lista. 
+
+## 57
+Escreva um programa que verifique se uma string é uma anagrama. 
+
+## 58
+Escreva um programa que calcule o número de dias entre duas datas. 
+
+## 59
+Escreva um programa que calcule o quociente e o resto de uma divisão inteira. 
+
+## 60
+Escreva um programa que calcule o valor absoluto de um número. 
+
+## 61
+Escreva um programa que encontre o número mais próximo de um dado número em uma lista. 
+
+## 62
+Escreva um programa que calcule a soma dos dígitos de um número. 
+
+## 63
+Escreva um programa que encontre o número mais distante de um dado número em uma lista. 
+
+## 64
+Escreva um programa que verifique se uma string é um pangrama. 
+
+## 65
+Escreva um programa que calcule a soma dos números de uma lista dentro de um determinado intervalo. (de uma posicao escolhida ate a outra) 
+
+## 66
+Escreva um programa que verifique se um número é uma potência de outro número. 
+
+## 67
+Escreva um programa que calcule a média geométrica de uma lista de números. 

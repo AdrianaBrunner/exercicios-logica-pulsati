@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //  Escreva um programa que ordene uma lista de números em ordem crescente.
+      //  Escreva um programa que ordene uma lista de números em ordem crescente.
 
-        let lista = [0, 1, 10, 5, 2, 20, 30]
+      let lista = [0, 1, 10, 5, 2, 20, 30];
 
-        lista.sort(function(a,b){
-            if(a > b) return 1
-            if(a < b) return -1
-            return 0
-        })
+      lista.sort(function (a, b) {
+        if (a > b) return 1;
+        if (a < b) return -1;
+        return 0;
+      });
 
-        document.write(lista)
+      document.write(lista);
+
+      // Outra forma
+      //   let numero = 0;
+      //   let lista = [];
+      //   let opcao = true;
+      //   do {
+      //     let numeroescolhido = parseInt(prompt("digite um número"));
+      //     lista.push(numeroescolhido);
+      //     opcao = confirm("quer escrever mais numeros?");
+      //   } while (opcao == true);
+      //   lista.sort((a, b) => a - b);
+      //   document.write(lista);
     </script>
-</body>
+  </body>
 </html>

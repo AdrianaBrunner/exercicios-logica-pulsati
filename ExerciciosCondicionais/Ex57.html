@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Escreva um programa que verifique se uma string é uma anagrama.
+
+        function anagrama(palavra1, palavra2) {
+            if(palavra1.length != palavra2.length){
+                return false
+            }
+            let str1 = palavra1.split("").sort().join("")
+            let str2 = palavra2.split("").sort().join("")
+            
+            if (str1 === str2) {
+                return true
+            }
+        }
+
+        document.write(anagrama("abc", "cba"))
+
+    </script>
+</body>
+</html>
