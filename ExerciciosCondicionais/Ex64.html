@@ -10,16 +10,42 @@
     <script>
         //Escreva um programa que verifique se uma string é um pangrama.
 
-        let alfabeto = []
-        let frase = "The quick brown fox jumps over a lazy dog"
+        // let frase = "The quick brown fox jumps over a lazy dog"
+        // let array1 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        // let array2 = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y","x","z"]
+
         
-            if(frase.includes("a"&&"b" && "c"&&"d"&&"e"&&"f"&&"g"&&"h"&&"i"&&"j"&&"k"&&"l"&&"m"&&"n"&&"o"&&"p"&&"q"&&"r"&&"s"&&"t"&&"u"&&"v"&&"w"&&"y"&&"x"&&"z")) {
-                document.write("A frase é um pangrama")
-            } else {
-                document.write("A frase não é um pangrama")
+
+        //     for (const [index, valor] of array2.entries()) {
+        //         console.log(`O INDEX É ${index}`)
+        //         console.log(`O VALOR É ${valor}`)
+        //     } 
+
+        // document.write("A frase é um pangrama")
+           
+        //    document.write("A frase não é um pangrama")
+        
+        function pangrama(frase) {
+
+            //Remova espaços e deixe tudo em lowercase
+            frase = frase.replace(/ /g, "").toLowerCase()
+
+            //Crie um array de todas as letras do alfabeto em lowercase
+            const alfabeto = "abcdefghijklmnopqrstuvwyxz".split("")
+
+            //Percorrer o alfabeto e checar se todas as letras estão presentes na frase 
+            for (let i = 0; i < alfabeto.length; i++) {
+                if(!frase.includes(alfabeto[i])) {
+                    return false
+                }
             }
-            
-        
+            //Se todas letras estão presentes, retorne true
+            return true
+        }
+
+        //Teste as frases
+        document.write(pangrama("The quick brown fox jumps over a lazy dog"))
+        document.write(pangrama("Não é pangrama"))
     </script>
 </body>
 </html>

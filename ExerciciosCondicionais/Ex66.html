@@ -9,7 +9,20 @@
 <body>
     <script>
         //Escreva um programa que verifique se um número é uma potência de outro número.
-        
+            function ehPotencia(base, num) {
+                let i = 2
+                while(Math.pow(base, i) <= num) {
+                    if(Math.pow(base,i) == num) {
+                        return true
+                    }
+                    i++
+                }
+                return false
+            }
+
+           console.log(2,8)
+
+        //    console.log(Math.pow(4,-3))
     </script>
 </body>
 </html>

@@ -9,53 +9,55 @@
   <body>
     <script>
       //Escreva um programa que encontre o número mais próximo de um dado número em uma lista.
-      function convNumPositivo(num) {
-        if (num < 0) {
-          num = num * -1;
+        function convNumPositivo(num) {
+          if (num < 0) {
+            num = num * -1;
+          }
+          return num;
         }
 
-        return num;
-      }
+        let lista = [];
+        let tamanhoLista = parseInt(prompt("Informe o tamanho da lista."));
+        let num;
 
-      let lista = [];
-
-      let tamanhoLista = parseInt(prompt("Informe o tamanho da lista."));
-
-      let num;
-
-      for (let i = 0; i < tamanhoLista; i++) {
-        num = (Math.random() * 100).toFixed(0);
-
-        lista.push(num);
-      }
-
-      alert(lista);
-
-      let numeroAEncontrar = parseInt(
-        prompt("Qual número deseja encontrar o mais próximo.")
-      );
-
-      let menorDistancia = 1000000;
-
-      let numeroMaisPerto;
-
-      for (let i = 0; i < lista.length; i++) {
-        if (convNumPositivo(numeroAEncontrar - lista[i]) < menorDistancia) {
-          menorDistancia = convNumPositivo(numeroAEncontrar - lista[i]);
-
-          numeroMaisPerto = lista[i];
+        for (let i = 0; i < tamanhoLista; i++) {
+          num = (Math.random() * 100).toFixed(0);
+          lista.push(num);
         }
-      }
 
-      lista.sort(function (a, b) {
-        if (a > b) return 1;
+        alert(lista);
 
-        if (a < b) return -1;
+        let numeroAEncontrar = parseInt(
+          prompt("Qual número deseja encontrar o mais próximo.")
+        );
+        let menorDistancia = 1000000;
+        let numeroMaisPerto;
 
-        return 0;
-      });
+        for (let i = 0; i < lista.length; i++) {
+          if (convNumPositivo(numeroAEncontrar - lista[i]) < menorDistancia) {
+            menorDistancia = convNumPositivo(numeroAEncontrar - lista[i]);
+            numeroMaisPerto = lista[i];
+          }
+        }
 
-      document.write(`A lista de ${tamanhoLista} números gerada foi:<br>${lista}<br>O número mais perto de ${numeroAEncontrar} é o :${numeroMaisPerto}. <br>`);
+        lista.sort(function (a, b) {
+          if (a > b) return 1;
+          if (a < b) return -1;
+          return 0;
+        });
+
+        document.write(`A lista de ${tamanhoLista} números gerada foi:<br>${lista}<br>O número mais perto de ${numeroAEncontrar} é o :${numeroMaisPerto}. <br>`);
+
+    //   let lista = [1,6,8,3];
+
+    //   function maisproximo(x) {
+    //     return lista.reduce((best, current) => {
+    //       return current >= x && (!best || current < best) ? current : best;
+    //     }, undefined);
+    //   }
+
+    //   console.log(maisproximo(10));
+
     </script>
   </body>
 </html>

@@ -10,15 +10,17 @@
     <script>
       //Escreva um programa que calcule a soma dos dígitos de um número.
 
-      let numero = 220;
-      let soma = 0;
+      function somaDigitos(num){
+        let soma = 0
+        num = num.toString()
 
-      while (numero != 0) {
-        soma   += numero % 10;
-        numero  = numero / 10;
-    }
-
-      document.write("<br>Quantidade de dígitos do número " + parseInt(soma));
+        for(let i = 0; i < num.length; i++) {
+          soma += parseInt(num.charAt(i))
+        }
+        return soma
+      }
+      document.write(somaDigitos(687));
+      
     </script>
   </body>
 </html>

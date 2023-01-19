@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //Escreva um programa que calcule a soma dos números de uma lista dentro de um determinado intervalo. (de uma posicao escolhida ate a outra)
+      //Escreva um programa que calcule a soma dos números de uma lista dentro de um determinado intervalo. (de uma posicao escolhida ate a outra)
 
-        
+      let lista = [];
+      let numero;
+      let soma = 0;
+      let opcao = true;
+
+      do {
+        numero = parseInt(prompt("Digite um numero"));
+        lista.push(numero);
+        opcao = confirm("Deseja continuar?")
+      } while (opcao == true);
+
+      let posicaoInicial = parseInt(prompt("Digite a posição inicial do array"));
+      let posicaoFinal = parseInt(prompt("Digite a posição final do array"));
+
+      document.write("Lista: " + lista);
+
+      for (let i = posicaoInicial; i <= posicaoFinal; i++) {
+        soma += lista[i];
+      }
+
+      document.write(
+        `<br> Soma dos números entre posição ${posicaoInicial} até ${posicaoFinal} é: ${soma}`
+      );
     </script>
-</body>
+  </body>
 </html>
