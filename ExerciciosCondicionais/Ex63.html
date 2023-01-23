@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //Escreva um programa que encontre o número mais distante de um dado número em uma lista.
+      //Escreva um programa que encontre o número mais distante de um dado número em uma lista.
 
-        let lista = [1,9,58,299]
-        let maior = -999
-
-        let num = parseInt(prompt("Digite um numero"))
-
-        for (let index = 0; index < lista.length; index++) {
-             if(lista[index] > maior) {
-                maior = lista[index]
-             }
+      function convNumPositivo(num) {
+        if (num < 0) {
+          num = num * -1;
         }
-
-        document.write("Numero mais distante: " + maior)
+        return num;
+      }
+      let lista = [];
+      let tamanhoLista = parseInt(prompt("Informe o tamanho da lista."));
+      let num;
+      for (let i = 0; i < tamanhoLista; i++) {
+        num = (Math.random() * 100).toFixed(0);
+        lista.push(num);
+      }
+      alert(lista);
+      let numeroAEncontrar = parseInt(
+        prompt("Qual número deseja encontrar o mais próximo.")
+      );
+      let menorDistancia = -1000000;
+      let numeroMaisPerto;
+      for (let i = 0; i < lista.length; i++) {
+        if (convNumPositivo(numeroAEncontrar - lista[i]) > menorDistancia) {
+          menorDistancia = convNumPositivo(numeroAEncontrar - lista[i]);
+          numeroMaisPerto = lista[i];
+        }
+      }
+      lista.sort(function (a, b) {
+        if (a > b) return -1;
+        if (a < b) return 1;
+        return 0;
+      });
+      document.write(
+        `A lista de ${tamanhoLista} números gerada foi:<br>${lista}<br>O número mais longe de ${numeroAEncontrar} é o :${numeroMaisPerto}. <br>`
+      );
     </script>
-</body>
+  </body>
 </html>
