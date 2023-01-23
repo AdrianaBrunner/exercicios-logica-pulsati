@@ -1,61 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //Escreva um programa que calcule a média geométrica de uma lista de números.
-       
-    //     raiz da multiplicacao de todos os numeros (Raiz de quantidade dos numeros )
-    //   3,12,16,36 = 12
-    //   */
+          //Escreva um programa que calcule a média geométrica de uma lista de números.
 
-      let lista = [3, 12, 16, 36];
-      let tamanhoLista = lista.length;
+      //     raiz da multiplicacao de todos os numeros (Raiz de quantidade dos numeros )
+      //   3,12,16,36 = 12
+      //   */
 
-      let multiplicacaoLista = 1;
+        let lista = [3, 12, 16, 36];
+        let tamanhoLista = lista.length;
 
-      for (let i = 0; i < lista.length; i++) {
-        multiplicacaoLista = multiplicacaoLista * lista[i];
-      }
+        let multiplicacaoLista = 1;
 
-      let indicador = 1;
-      let numeroFatorial = 0;
-      for (let i = 1; i < multiplicacaoLista; i++) {
-        indicador = i;
-        for (let y = 1; y < tamanhoLista; y++) {
-          indicador = indicador * i;
+        for (let i = 0; i < lista.length; i++) {
+          multiplicacaoLista = multiplicacaoLista * lista[i];
         }
 
-        if (indicador == multiplicacaoLista) {
-          numeroFatorial = i;
-          break;
-        }
-        if (indicador > multiplicacaoLista) {
-          numeroFatorial = "Indefinido";
-          break;
-        }
-      }
+        let indicador = 1;
+        let numeroFatorial = 0;
+        for (let i = 1; i < multiplicacaoLista; i++) {
+          indicador = i;
+          for (let y = 1; y < tamanhoLista; y++) {
+            indicador = indicador * i;
+          }
 
-      document.write(`
-      A lista atual é a [${lista}] <br>
-      O tamanho da lista  é  [${tamanhoLista}] <br>
-      A média geométrica da lista é  ${numeroFatorial} <br>
-      <br>
-      Resolução: Raiz (quantidade de números) da lista de números.<br>
-      _________________.<br>
-      ${tamanhoLista}√${lista}|.<br>
-      [${lista}] multiplicado entre si =  ${multiplicacaoLista}. <br>
-      O fatorial de ${multiplicacaoLista} é ${numeroFatorial}, ou seja:<br>
-       ${numeroFatorial} elevado a ${tamanhoLista} anula a raiz ${tamanhoLista}º sobre os números.<br>
-       _________________.<br>
-       ${tamanhoLista}√${numeroFatorial}º[${tamanhoLista}]|.<br>
-      `);
+          if (indicador == multiplicacaoLista) {
+            numeroFatorial = i;
+            break;
+          }
+          if (indicador > multiplicacaoLista) {
+            numeroFatorial = "Indefinido";
+            break;
+          }
+        }
 
+        document.write(`
+        A lista atual é a [${lista}] <br>
+        O tamanho da lista  é  [${tamanhoLista}] <br>
+        A média geométrica da lista é  ${numeroFatorial} <br>
+        <br>
+        Resolução: Raiz (quantidade de números) da lista de números.<br>
+        _________________.<br>
+        ${tamanhoLista}√${lista}|.<br>
+        [${lista}] multiplicado entre si =  ${multiplicacaoLista}. <br>
+        O fatorial de ${multiplicacaoLista} é ${numeroFatorial}, ou seja:<br>
+         ${numeroFatorial} elevado a ${tamanhoLista} anula a raiz ${tamanhoLista}º sobre os números.<br>
+         _________________.<br>
+         ${tamanhoLista}√${numeroFatorial}º[${tamanhoLista}]|.<br>
+        `);
+
+
+        // Outra forma
+        // let n1 = Number(prompt('Digite um numero'))
+        // let n2 = Number(prompt('Digite um numero'))
+        // let n3 = Number(prompt('Digite um numero'))
+        // let log1 = Math.log(n1);
+        // let log2 = Math.log(n2);
+        // let log3 = Math.log(n3);
+        // let medialog = (log1 + log2 + log3)/3;
+        // let media2 = medialog /3;
+        // let antilog = Math.pow(10, media2);
+        
+        // document.write('O resultado é ', parseFloat(antilog))
     </script>
-</body>
+  </body>
 </html>
