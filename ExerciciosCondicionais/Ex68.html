@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //Escreva um programa que implemente o algoritmo de ordenação Merge Sort.
+      //Escreva um programa que implemente o algoritmo de ordenação Merge Sort.
+      let numeros = [3, 2, 1, 4, 5, 6, 7, 8, 9];
+      if (numeros.length < 2) {
+        console.log(numeros)
+      }
+      let meio = Math.floor(numeros.length / 2);
+      let esquerda = numeros.slice(0, meio);
+      let direita = numeros.slice(meio);
+      console.log(merge(mergeSort(esquerda), mergeSort(direita)))
 
-        
-    </script>
-</body>
+      function merge(esquerda, direita) {
+        let resultado = [];
+        let indexEsquerdo = 0;
+        let indexDireito = 0;
+        while (indexEsquerdo < esquerda.length && indexDireito < direita.length) {
+          if (esquerda[indexEsquerdo] < direita[indexDireito]) {
+            resultado.push(esquerda[indexEsquerdo]);
+            indexEsquerdo++;
+          } else {
+            resultado.push(direita[indexDireito]);
+            indexDireito++;
+          }
+        }
+        console.log(resultado
+          .concat(esquerda.slice(indexEsquerdo))
+          .concat(direita.slice(indexDireito)))
+      }
+
+      
+      document.write(mergeSort(numeros))   
+       </script>
+  </body>
 </html>

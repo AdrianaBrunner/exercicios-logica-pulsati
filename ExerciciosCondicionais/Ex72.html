@@ -8,19 +8,30 @@
   </head>
   <body>
     <script>
-
       //Escreva um programa que encontre o menor valor em uma matriz.
 
-      var arr = [
-        [1, 2, 3],
+      function acharMenor(matriz) {
+        let menor = matriz[0][0];
+        for (let i = 0; i < matriz.length; i++) {
+          for (let j = 0; j < matriz[i].length; j++) {
+            if (matriz[i][j] < menor) {
+              menor = matriz[i][j];
+            }
+            document.write(matriz[i][j]);
+          }
+          document.write("<br>")
+
+        }
+        return menor;
+      }
+
+      let matriz = [
+        [9, 2, 3],
         [4, 5, 6],
         [7, 8, 9],
-      ].reduce(function (p, c) {
-        return p.concat(c);
-      });
+      ];
 
-      var min = Math.min.apply(null, arr); // 1
-      document.write(min)
+      document.write("Menor número da matriz: " + acharMenor(matriz));
     </script>
   </body>
 </html>

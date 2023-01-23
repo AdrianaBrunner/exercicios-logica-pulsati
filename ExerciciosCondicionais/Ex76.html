@@ -8,12 +8,12 @@
   </head>
   <body>
     <script>
-      //Escreva um programa que encontre a soma dos valores de uma matriz diagonal principal.
+      //Escreva um programa que encontre a soma dos valores de cada linha de uma matriz.
 
-      function somaDiagonal(matriz) {
-        let soma = 0;
+      function somaLinhas(matriz) {
+        let soma = [];
         for (let i = 0; i < matriz.length; i++) {
-            soma += matriz[i][i];
+          soma[i] = matriz[i].reduce((a, b) => a + b);
         }
         return soma;
       }
@@ -23,14 +23,7 @@
         [4, 5, 6],
         [7, 8, 9],
       ];
-
-      for (let i = 0; i < matriz.length; i++) {
-        for (let j = 0; j < matriz.length; j++) {
-            document.write(matriz[i][j])
-        }
-        document.write("<br>")
-      }
-      document.write("Soma dos números na diagonal: " + somaDiagonal(matriz)); 
+      document.write(somaLinhas(matriz)); 
     </script>
   </body>
 </html>

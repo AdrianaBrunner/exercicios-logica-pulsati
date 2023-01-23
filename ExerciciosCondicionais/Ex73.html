@@ -8,19 +8,28 @@
   </head>
   <body>
     <script>
-
       //Escreva um programa que encontre o maior valor em uma matriz.
-      var arr = [
+      function acharMaior(matriz) {
+        let maior = matriz[0][0];
+        for (let i = 0; i < matriz.length; i++) {
+          for (let j = 0; j < matriz.length; j++) {
+            if (matriz[i][j] > maior) {
+              maior = matriz[i][j];
+            }
+            document.write(matriz[i][j]);
+          }
+          document.write("<br>");
+        }
+        return maior;
+      }
+
+      let matriz = [
         [1, 2, 3],
-        [4, 5, 6],
+        [4, 10, 6],
         [7, 8, 9],
-      ].reduce(function (p, c) {
-        return p.concat(c);
-      });
+      ];
 
-      var max = Math.max.apply(null, arr); // 9
-      document.write(max)
-
+      document.write("Maior número da matriz: " + acharMaior(matriz));
     </script>
   </body>
 </html>
