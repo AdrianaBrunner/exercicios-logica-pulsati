@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //Escreva um programa que verifique se uma string é um pangrama.
+      //Escreva um programa que verifique se uma string é um pangrama.
+      // function pangrama(frase) {
 
-        // let frase = "The quick brown fox jumps over a lazy dog"
-        // let array1 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-        // let array2 = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y","x","z"]
+        const alfabeto = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y","x","z"]
 
+        let frase = "The quick brown fox jumps over a lazy dog";
+        frase = frase.toLowerCase();
+
+        alfabeto.forEach((element) => {
+        if (!frase.includes(element)) {
+        document.write("Letra " + element + " não existe na frase, portanto não é um pangrama");
+        } 
+        });
         
 
-        //     for (const [index, valor] of array2.entries()) {
-        //         console.log(`O INDEX É ${index}`)
-        //         console.log(`O VALOR É ${valor}`)
-        //     } 
 
-        // document.write("A frase é um pangrama")
-           
-        //    document.write("A frase não é um pangrama")
-        
-        function pangrama(frase) {
 
-            //Remova espaços e deixe tudo em lowercase
-            frase = frase.replace(/ /g, "").toLowerCase()
 
-            //Crie um array de todas as letras do alfabeto em lowercase
-            const alfabeto = "abcdefghijklmnopqrstuvwyxz".split("")
 
-            //Percorrer o alfabeto e checar se todas as letras estão presentes na frase 
-            for (let i = 0; i < alfabeto.length; i++) {
-                if(!frase.includes(alfabeto[i])) {
-                    return false
-                }
-            }
-            //Se todas letras estão presentes, retorne true
-            return true
-        }
 
-        //Teste as frases
-        document.write(pangrama("The quick brown fox jumps over a lazy dog"))
-        document.write(pangrama("Não é pangrama"))
+
+      //     frase = frase.replace(/ /g, "").toLowerCase()
+
+      //     const alfabeto = "abcdefghijklmnopqrstuvwyxz".split("")
+
+      //     for (let i = 0; i < alfabeto.length; i++) {
+      //         if(!frase.includes(alfabeto[i])) {
+      //             return false
+      //         }
+      //     }
+      //     return true
+      // }
+      
+      // document.write(pangrama("The quick brown fox jumps over a lazy dog"))
+      // document.write(pangrama("Não é pangrama"))
+
+    // let frase = "The quick brown fox jumps over a lazy dog"
+      // let array1 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+      // let array2 = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y","x","z"]
+
+      //     for (const [index, valor] of array2.entries()) {
+      //         console.log(`O INDEX É ${index}`)
+      //         console.log(`O VALOR É ${valor}`)
+      //     }
+
+      // document.write("A frase é um pangrama")
+
+      //    document.write("A frase não é um pangrama")
+
     </script>
-</body>
+  </body>
 </html>

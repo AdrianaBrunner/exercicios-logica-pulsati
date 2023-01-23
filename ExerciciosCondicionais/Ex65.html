@@ -18,10 +18,12 @@
       do {
         numero = parseInt(prompt("Digite um numero"));
         lista.push(numero);
-        opcao = confirm("Deseja continuar?")
+        opcao = confirm("Deseja continuar?");
       } while (opcao == true);
 
-      let posicaoInicial = parseInt(prompt("Digite a posição inicial do array"));
+      let posicaoInicial = parseInt(
+        prompt("Digite a posição inicial do array")
+      );
       let posicaoFinal = parseInt(prompt("Digite a posição final do array"));
 
       document.write("Lista: " + lista);

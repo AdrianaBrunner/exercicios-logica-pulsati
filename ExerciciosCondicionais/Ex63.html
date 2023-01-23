@@ -9,6 +9,19 @@
 <body>
     <script>
         //Escreva um programa que encontre o número mais distante de um dado número em uma lista.
+
+        let lista = [1,9,58,299]
+        let maior = -999
+
+        let num = parseInt(prompt("Digite um numero"))
+
+        for (let index = 0; index < lista.length; index++) {
+             if(lista[index] > maior) {
+                maior = lista[index]
+             }
+        }
+
+        document.write("Numero mais distante: " + maior)
     </script>
 </body>
 </html>

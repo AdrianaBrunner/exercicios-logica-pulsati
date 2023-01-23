@@ -1,0 +1,12 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.cursorStyle": "line",
+    "editor.wordWrap": "on",
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": false,
+    "editor.cursorWidth": 0,
+    "workbench.activityBar.iconClickBehavior": "toggle",
+    "workbench.preferredDarkColorTheme": "Midnight Synth",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.sideBar.location": "left"
+}

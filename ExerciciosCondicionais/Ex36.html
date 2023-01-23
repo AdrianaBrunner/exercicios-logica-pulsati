@@ -10,7 +10,15 @@
     <script>
       //  Escreva um programa que ordene uma lista de números em ordem crescente.
 
-      let lista = [0, 1, 10, 5, 2, 20, 30];
+      let lista = [];
+      let opcao = true
+      let numeroescolhido
+      do {
+        numeroescolhido = parseInt(prompt("Digite um numero"))
+        lista.push(numeroescolhido)
+        opcao = confirm("Quer continuar?")
+      } while (opcao == true)
+
 
       lista.sort(function (a, b) {
         if (a > b) return 1;

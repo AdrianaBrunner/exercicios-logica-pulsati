@@ -13,14 +13,18 @@
         let n = array.length
         let arrayMultiplicado = 1
     
-
+        
         for (let index = 0; index < array.length; index++) {
             arrayMultiplicado *= array[index]
         }
 
         document.write(arrayMultiplicado)
-        let media = n * Math.sqrt(arrayMultiplicado)
-        document.write(media)
+        let raiz = Math.sqrt(arrayMultiplicado)
+        let resultado = raiz
+        for(let i = 1; i <= raiz; i++) {
+            resultado *= i
+        }
+        document.write(resultado)
 
     </script>
 </body>

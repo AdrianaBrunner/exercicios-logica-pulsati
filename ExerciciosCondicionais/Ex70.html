@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Escreva um programa que implemente o algoritmo de busca binária em uma lista ordenada.
+        
+        function busca(array, alvo) {
+            let min = 0
+            let max = array.length - 1
+            let chute
+
+            while (min <= max) {
+                chute = Math.floor(max + min) / 2
+                if(array[chute] == alvo) {
+                    return chute
+                } 
+                
+                if(array[chute] < alvo) {
+                    min = chute + 1
+                    } else {
+                        max = chute - 1
+                    }
+            }
+            return -1
+        }
+        let array = [2,5,6,8,9,20,21,48,87]
+        let alvo = 9
+        let resultado = busca(array,alvo)
+
+        if(resultado != -1) {
+            document.write("Posição do palpite " + alvo + " na lista: " + resultado + "º")
+        } else {
+            document.write("O alvo não está no array")
+        }
+    </script>
+</body>
+</html>
