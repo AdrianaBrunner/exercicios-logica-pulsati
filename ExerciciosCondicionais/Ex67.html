@@ -10,22 +10,51 @@
     <script>
         //Escreva um programa que calcule a média geométrica de uma lista de números.
        
-        let array = [1,23,25]
-        let n = array.length
-        let arrayMultiplicado = 1
-    
-        
-        for (let index = 0; index < array.length; index++) {
-            arrayMultiplicado *= array[index]
+    //     raiz da multiplicacao de todos os numeros (Raiz de quantidade dos numeros )
+    //   3,12,16,36 = 12
+    //   */
+
+      let lista = [3, 12, 16, 36];
+      let tamanhoLista = lista.length;
+
+      let multiplicacaoLista = 1;
+
+      for (let i = 0; i < lista.length; i++) {
+        multiplicacaoLista = multiplicacaoLista * lista[i];
+      }
+
+      let indicador = 1;
+      let numeroFatorial = 0;
+      for (let i = 1; i < multiplicacaoLista; i++) {
+        indicador = i;
+        for (let y = 1; y < tamanhoLista; y++) {
+          indicador = indicador * i;
         }
 
-        document.write(arrayMultiplicado)
-        let raiz = Math.sqrt(arrayMultiplicado)
-        let resultado = raiz
-        for(let i = 1; i <= raiz; i++) {
-            resultado *= i
+        if (indicador == multiplicacaoLista) {
+          numeroFatorial = i;
+          break;
         }
-        document.write(resultado)
+        if (indicador > multiplicacaoLista) {
+          numeroFatorial = "Indefinido";
+          break;
+        }
+      }
+
+      document.write(`
+      A lista atual é a [${lista}] <br>
+      O tamanho da lista  é  [${tamanhoLista}] <br>
+      A média geométrica da lista é  ${numeroFatorial} <br>
+      <br>
+      Resolução: Raiz (quantidade de números) da lista de números.<br>
+      _________________.<br>
+      ${tamanhoLista}√${lista}|.<br>
+      [${lista}] multiplicado entre si =  ${multiplicacaoLista}. <br>
+      O fatorial de ${multiplicacaoLista} é ${numeroFatorial}, ou seja:<br>
+       ${numeroFatorial} elevado a ${tamanhoLista} anula a raiz ${tamanhoLista}º sobre os números.<br>
+       _________________.<br>
+       ${tamanhoLista}√${numeroFatorial}º[${tamanhoLista}]|.<br>
+      `);
 
     </script>
 </body>
